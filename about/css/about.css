@@ -1,0 +1,16 @@
+:root{
+  --about-txt-fg:white;
+  --about-desc-txt-size:20px;
+}
+
+.about-desc{
+  width: 80%;
+  max-width: 600px;
+  font-size: var(--about-desc-txt-size);
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  line-height: 1.3em;
+  color: white;
+}

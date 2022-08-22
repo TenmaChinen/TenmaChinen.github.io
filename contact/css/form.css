@@ -1,0 +1,73 @@
+:root {
+  --form-txt-size: 18px;
+  --form-fg: rgb(203, 203, 203);
+  --form-ph-fg: rgb(178, 178, 178);
+  --form-bg: rgb(45, 45, 45);
+  --form-input-bg:rgb(71, 71, 71);
+  --form-width:600px;
+}
+
+.form-wrapper {
+  max-width: var(--form-width);
+  border-radius: 5px;
+  background-color: var(--form-bg);
+  /* box-shadow: 1px 1px 5px gray; */
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-body {
+  display: grid;
+  grid-template-columns: 80px minmax(300px,1fr);
+  row-gap: 10px;
+  column-gap: 5px;
+}
+
+form input,
+form label,
+form textarea {
+  font-size: var(--form-txt-size);
+  color: var(--form-fg);
+}
+
+form label {
+  display: inline-block;
+  width: 80px;
+}
+
+form input,
+form textarea {
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid gray;
+  background-color: var(--form-input-bg);
+  border: none;
+  outline: none;
+}
+
+form input::placeholder,
+form textarea::placeholder{
+  color: var(--form-ph-fg);
+}
+
+form textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100px;
+}
+
+.form-foot{
+  margin-top: 10px;
+  text-align: end;
+}
+
+.form-foot button{
+  padding: 5px;
+  border-radius: 5px;
+  font-size: var(--form-txt-size);
+  background-color: rgb(122, 122, 122);
+  color: white;
+  border: 1px solid gray;
+  width: 80px;
+}

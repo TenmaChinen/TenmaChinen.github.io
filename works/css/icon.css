@@ -1,0 +1,61 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+  background-origin: content-box;
+}
+
+.icon-python {
+  background-image: url("python.svg");
+}
+
+.icon-android {
+  background-image: url("android.svg");
+}
+
+.icon-machine {
+  background-image: url("machine.svg");
+}
+
+.icon-django {
+  background-image: url("django.svg");
+}
+
+.icon-arduino {
+  background-image: url("arduino.svg");
+}
+
+.icon-github {
+  background-image: url("../assets/icons/github.svg");
+}
+
+.icon-website {
+  background-image: url("../assets/icons/website.svg");
+}
+
+
+/* MEDIA QUERIES */
+
+
+@media screen and (min-width:950px) {
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media screen and (min-width:600px) and (max-width:950px) {
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}

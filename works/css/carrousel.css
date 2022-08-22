@@ -1,0 +1,79 @@
+:root{
+  --carrousel-foot-txt-size:  20px;
+  --carrousel-fg:  white;
+}
+
+.carrousel-wrapper {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: rgb(211, 211, 159); */
+}
+
+#carrousel{
+  width: 100%;
+  display: grid;
+  /* padding: 0px 20px; */
+  /* background-color: rgb(237, 194, 136); */
+  /* grid-template-columns: repeat(3, 1fr); */
+  gap: 10px 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* #carrousel div{
+  width: 100px;
+  height: 80px;
+  background-color: rgb(157, 215, 215);
+} */
+
+
+.carrousel-foot{
+  /* width: 100%; */
+  /* background-color: aquamarine; */
+  padding: 10px;
+  font-size: var(--carrousel-foot-txt-size);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carrousel-foot span,
+.carrousel-foot button{
+  color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.carrousel-foot button:disabled{
+  color: gray;
+  border: 1px solid rgb(76, 76, 76);
+}
+
+@media screen and (min-width: 950px){
+  #carrousel{
+    grid-template-columns: repeat(3, minmax(100px,320px));
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 950px){
+  #carrousel{
+    grid-template-columns: repeat(2,minmax(100px,350px));
+  } 
+}
+
+@media screen and (max-width: 600px){
+  #carrousel{
+    grid-template-columns: 1fr;
+  } 
+}

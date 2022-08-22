@@ -1,0 +1,73 @@
+:root {
+  --head-bg: rgb(88, 88, 88);
+  --works-bg: rgb(66, 66, 66);
+  --about-bg: rgb(88, 88, 88);
+  --contact-bg: rgb(66, 66, 66);
+  --foot-bg: rgb(31, 31, 31);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+main {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  /* padding: 10px; */
+  overflow-y: auto;
+  background-color: aliceblue;
+}
+
+/* debug */
+section {
+  display: block;
+  width: 100%;
+  /* min-width: 700px; */
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
+  padding: 60px 0px;
+}
+
+header {
+  /* background-color: aquamarine; */
+  background-color: var(--head-bg);
+}
+
+#works {
+  background-color: var(--works-bg);
+  height: fit-content;
+}
+
+#about {
+  background-color: var(--about-bg);
+}
+
+#contact {
+  background-color: var(--contact-bg);
+}
+
+#foot {
+  height: 400px;
+  background-color:var(--foot-bg);
+}
+
+.section-title{
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  /* margin-top: 20px; */
+  margin-bottom: 20px;
+}

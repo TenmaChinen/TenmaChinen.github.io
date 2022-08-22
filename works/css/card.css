@@ -1,0 +1,102 @@
+:root {
+  --card-fg: white;
+  --card-head-bg: rgb(32, 32, 32,0.95);
+  --card-foot-bg:rgb(32, 32, 32,0.8);
+}
+
+.work-card {
+  background-size: cover;
+  text-decoration: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 270px;
+  background-color: gray;
+  /* padding: 10px; */
+  color: var(--card-fg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.work-card-head {
+  padding: 10px 10px;
+  font-size: var(--card-title-txt-size);
+  background-color: var(--card-head-bg);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  font-weight: 500;
+  text-align: center;
+}
+
+.work-card-body {
+  font-size: var(--card-body-txt-size);
+  cursor: pointer;
+  overflow-y: hidden;
+  flex-grow: 1;
+  padding: 20px;
+  line-height: 1.5em;
+  transition: background-color ease-in-out 0.5s;
+}
+
+.work-card:hover .work-card-body {
+  background-color: rgba(50, 50, 50, 0.8);
+}
+
+.work-card-body p{
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: opacity ease-in-out 0.5s;
+}
+
+.work-card:hover .work-card-body p{
+  opacity: 1;
+}
+
+
+.work-card-foot {
+  padding: 7px 10px;
+  font-size: var(--card-foot-txt-size);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  background-color: var(--card-foot-bg);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.work-card-foot .links-box div{
+  margin-left: 5px;
+}
+
+.work-card-foot .group{
+  background-color: rgb(51, 143, 112);
+  padding: 4px 6px;
+  border-radius: 5px;
+}
+
+/*   M E D I A   Q U E R I E S   */
+
+@media screen and (min-width: 950px) {
+  :root {
+    --card-title-txt-size: 20px;
+    --card-body-txt-size: 20px;
+    --card-foot-txt-size: 15px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 950px) {
+  :root {
+    --card-title-txt-size: 20px;
+    --card-body-txt-size: 18px;
+    --card-foot-txt-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --card-title-txt-size: 16px;
+    --card-body-txt-size: 18px;
+    --card-foot-txt-size: 14px;
+  }
+}

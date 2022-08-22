@@ -1,43 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" type="text/css" href="css/base.css">
-  <link rel="stylesheet" type="text/css" href="icons/icons.css">
-  <script src="js/jquery-3.6.0.js"></script>
+  <title>Portfolio</title>
 
+  <link rel="icon" type="image/x-icon" href="base/assets/favicon.ico">
+  <link rel="stylesheet" href="base/css/font.css">
+  <link rel="stylesheet" href="base/css/base.css">
+  <link rel="stylesheet" href="base/css/navbar.css">
+  <link rel="stylesheet" href="header/css/header.css">
+  <link rel="stylesheet" href="works/css/carrousel.css">
+  <link rel="stylesheet" href="works/css/card.css">
+  <link rel="stylesheet" href="works/css/icon.css">
+  <link rel="stylesheet" href="about/css/about.css">
+  <link rel="stylesheet" href="contact/css/form.css">
+  <link rel="stylesheet" href="footer/css/footer.css">
 </head>
+
 <body>
-  
   <nav>
-    <!-- <div class="icon icon-menu" onclick="onMenuClick()"></div> -->
-    <div id="nav-title">Home</div>
-    <div class="icon icon-options" onclick="toggleOptions()"></div>
-    <div id="nav-options" class="options">
-      <a href="#" style="text-decoration-line: underline;">Home</a>
-      <a href="works.html">Works</a>
-      <a href="about.html">About me</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div id="nav-options-pop" onfocusout="closeOptions()" tabindex="0">
-      <a href="#" style="text-decoration-line: underline;">Home</a>
-      <a href="works.html">Works</a>
-      <a href="about.html">About me</a>
-      <a href="contact.html">Contact</a>
-    </div>
+    <a href="#about">About</a>
+    <a href="#works">Works</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <div id="container" class="container">
-  </div>
+  <main>
+    <!--   H E A D E R   -->
+    <header>
+      <div class="img-face-wrapper">
+        <img src="header/assets/face_circle.png" alt="profile" height="100%">
+      </div>
+      <div class="head-wrapper">
+        <span class="head-title">Tenma Chinen</span>
+        <span class="head-sub-title">Automation & Industrial Electronic Engineer</span>
+        <p class="head-desc">Freelance Full-Stack Web Developer constantly learning, self taught, curious, and
+          creative.</p>
+      </div>
+    </header>
+
+    <!--   W O R K S   -->
+
+    <section id="works">
+      <h1 class="section-title">WORKS</h1>
+
+      <div class="carrousel-wrapper">
+        <div id="carrousel" class="carrousel"></div>
+        <div class="carrousel-foot">
+          <button onclick="prevPage()" id="btn-prev">Prev</button>
+          <span id="page"></span>
+          <button onclick="nextPage()" id="btn-next">Next</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!--   A B O U T   -->
+
+    <section id="about">
+      <h1 class="section-title">ABOUT</h1>
+      <p class="about-desc">Hi! I'm Tenma, I'm an electronic engineer, but my main interest and almost a hobby relies on Machine Learning,
+        specially researching about neural networks performance and techniques applied to any environment. I like to
+        create algorithms to solve those issues that Machine Learning still cannot face off as well..</p>
+    </section>
+
+    <!--   C O N T A C T   -->
+
+    <section id="contact">
+      <h1 class="section-title">CONTACT</h1>
+      <div class="form-wrapper">
+        <form action="#">
+          <div class="form-body">
+            <label>Name:</label>
+            <input name="name" type="text" placeholder="Your Name">
+
+            <label>Email:</label>
+            <input name="email" type="email" placeholder="You Email">
+
+            <label>Message:</label>
+            <textarea name="message" type="text" placeholder="Write your message here"></textarea>
+          </div>
+
+          <div class="form-foot">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+
+    <!--   F O O T E R   -->
+
+    <footer id="foot">
+      <div class="links-wrapper">
+        <a href=""><div class="icon icon-github"></div></a>
+        <a href=""><div class="icon icon-linkedin"></div></a>
+      </div>
+      <span>TENMA CHINEN</span>
+    </footer>
+
+  </main>
 
 </body>
 
-<!-- <script src="js/index.js"></script> -->
-<script src="js/events.js"></script>
+<script src="works/js/data.js"></script>
+<script src="works/js/card.js"></script>
+<script src="works/js/carrousel.js"></script>
 
-<script src="js/wip.js" elementId="container"></script>
+<script>
+  /* DEBUG */
+  location.href = "#about";
+</script>
 
 </html>
