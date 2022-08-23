@@ -19,39 +19,58 @@ header {
   box-shadow: 1px 1px 10px rgb(0, 0, 0,0.5);
 }
 
-
 .head-wrapper {
   display: inline-flex;
   flex-direction: column;
   justify-items: center;
   color: white;
   align-items: center;
-  /* margin-top: 40px; */
+  margin-top: 20px;
 }
 
 .head-title {
   font-size: var(--head-title-size);
   margin-bottom: 10px;
-  font-weight: 400;
+  font-weight: 500;
   /* font-weight: 100; */
 }
 
 .head-sub-title {
   display: inline-block;
   font-size: var(--head-sub-title-size);
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 20px;
-  width: 300px;
   text-align: center;
+  line-height: 1.5em;
 }
 
 .head-desc {
   font-size: var(--head-desc-size);
   font-weight: 400;
-  max-width: 500px;
   padding: 0px 10px;
   text-align: center;
+  line-height: 1.5em;
 }
+
+.btn-download-cv{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px 5px 10px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  margin-top: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-download-cv i{
+  margin-right: 5px;
+}
+
 
 @media screen and (min-width: 950px) {
   .img-face-wrapper {

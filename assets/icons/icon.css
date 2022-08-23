@@ -21,8 +21,8 @@
   background-image: url("android.svg");
 }
 
-.icon-machine {
-  background-image: url("machine.svg");
+.icon-ml {
+  background-image: url("ml.svg");
 }
 
 .icon-django {
@@ -43,6 +43,10 @@
 
 .icon-linkedin {
   background-image: url("linkedin.svg");
+}
+
+.icon-download {
+  background-image: url("download.svg");
 }
 
 

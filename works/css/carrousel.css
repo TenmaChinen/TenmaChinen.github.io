@@ -1,6 +1,7 @@
 :root{
   --carrousel-foot-txt-size:  20px;
   --carrousel-fg:  white;
+  --pagination-txt-size:20px;
 }
 
 .carrousel-wrapper {
@@ -35,7 +36,6 @@
 .carrousel-foot{
   /* width: 100%; */
   /* background-color: aquamarine; */
-  padding: 10px;
   font-size: var(--carrousel-foot-txt-size);
   text-align: center;
   margin-top: 10px;
@@ -45,14 +45,14 @@
 .carrousel-foot button{
   color: white;
   border: 1px solid gray;
-  border-radius: 5px;
-  padding: 10px 15px;
+  border-radius: 30px;
+  padding: 8px 15px;
   margin-left: 10px;
   margin-right: 10px;
   text-decoration: none;
   background-color: transparent;
   cursor: pointer;
-  font-size: 25px;
+  font-size: var(--pagination-txt-size);
 }
 
 .carrousel-foot button:disabled{
@@ -60,13 +60,13 @@
   border: 1px solid rgb(76, 76, 76);
 }
 
-@media screen and (min-width: 950px){
+@media screen and (min-width: 1150px){
   #carrousel{
     grid-template-columns: repeat(3, minmax(100px,320px));
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 950px){
+@media screen and (min-width: 600px) and (max-width: 1150px){
   #carrousel{
     grid-template-columns: repeat(2,minmax(100px,350px));
   } 

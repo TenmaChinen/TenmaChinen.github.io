@@ -2,7 +2,9 @@ let currentPage = 1;
 let recordsPerPage = 6;
 
 let works;
-
+let selectedGroupId = -1;
+let lastSelectedElement = document.querySelector('.btn-all-groups');
+lastSelectedElement.classList.toggle("group-selected");
 // const objJson = [];
 
 // [...Array(20).keys()].forEach(idx => {
@@ -30,19 +32,18 @@ function changePage(page) {
     const pageSpan = document.getElementById("page");
 
     carrousel.innerHTML = "";
-    const option = -1
     works = [];
-    if (option == -1) {
-        worksGroups.forEach(worksGroup => {
+    if (selectedGroupId == -1) {
+        Object.keys(worksGroups).forEach(groupId => {
+            const worksGroup = worksGroups[groupId];
             worksGroup.worksId.forEach(workId => {
-                works.push({ groupId: worksGroup.id, workId: workId, groupName:worksGroup.name });
+                works.push({ groupId: groupId, workId: workId, groupName:worksGroup.name });
             });
         });
     } else {
-        const groupId = worksGroups[option].id;
-        const worksGroup = worksGroups[option];
-        workGroup.worksId.forEach(workId => {
-            works.push({ groupId: groupId, workId: workId, groupName:worksGroup.name });
+        const worksGroup = worksGroups[selectedGroupId];
+        worksGroup.worksId.forEach(workId => {
+            works.push({ groupId: selectedGroupId, workId: workId, groupName:worksGroup.name });
         });
     }
 
@@ -82,6 +83,18 @@ function numPages() {
 window.onload = function () {
     changePage(1);
 };
+
+
+function onClickGroup(event,groupId){
+    if (event.target != lastSelectedElement){
+        lastSelectedElement.classList.toggle("group-selected");
+        event.target.classList.toggle("group-selected");
+        lastSelectedElement = event.target;
+    }
+    currentPage = 1;
+    selectedGroupId = groupId;
+    changePage(1);
+}
 
 
 

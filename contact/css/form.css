@@ -4,7 +4,7 @@
   --form-ph-fg: rgb(178, 178, 178);
   --form-bg: rgb(45, 45, 45);
   --form-input-bg:rgb(71, 71, 71);
-  --form-width:600px;
+  --form-width:500px;
 }
 
 .form-wrapper {
@@ -19,7 +19,7 @@
 
 .form-body {
   display: grid;
-  grid-template-columns: 80px minmax(300px,1fr);
+  grid-template-columns: 80px minmax(0px,1fr);
   row-gap: 10px;
   column-gap: 5px;
 }
@@ -52,8 +52,6 @@ form textarea::placeholder{
 }
 
 form textarea {
-  min-width: 100%;
-  max-width: 100%;
   min-height: 100px;
 }
 

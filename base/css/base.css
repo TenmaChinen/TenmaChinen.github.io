@@ -1,8 +1,8 @@
 :root {
-  --head-bg: rgb(88, 88, 88);
-  --works-bg: rgb(66, 66, 66);
-  --about-bg: rgb(88, 88, 88);
-  --contact-bg: rgb(66, 66, 66);
+  --head-bg: rgb(56, 60, 69);
+  --works-bg: rgb(82, 82, 82);
+  --about-bg: rgb(65, 65, 65);
+  --contact-bg: rgb(58, 58, 58);
   --foot-bg: rgb(31, 31, 31);
 }
 
@@ -26,7 +26,7 @@ main {
   height: 100%;
   /* padding: 10px; */
   overflow-y: auto;
-  background-color: aliceblue;
+  background-color: black;
 }
 
 /* debug */
@@ -34,11 +34,9 @@ section {
   /* display: block; */
   /* width: 100%; */
   /* min-width: 700px; */
-  /* margin-left: auto; */
-  /* margin-right: auto; */
   /* margin-top: 10px; */
   /* margin-bottom: 10px; */
-  padding: 60px 0px;
+  padding: 60px 20px;
 }
 
 header {
@@ -71,4 +69,25 @@ header {
   text-align: center;
   /* margin-top: 20px; */
   margin-bottom: 20px;
+}
+
+
+.separator{
+  height: 10px;
+}
+
+.header-works{
+  background-image: linear-gradient(var(--head-bg),var(--works-bg));
+}
+
+.works-about{
+  background-image: linear-gradient(var(--works-bg),var(--about-bg));
+}
+
+.about-contact{
+  background-image: linear-gradient(var(--about-bg),var(--contact-bg));
+}
+
+.contact-foot{
+  background-image: linear-gradient(var(--contact-bg),var(--foot-bg));
 }

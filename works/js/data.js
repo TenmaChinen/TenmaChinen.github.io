@@ -1,36 +1,31 @@
-const worksGroups = [
-  {
-    "id": "python",
+const worksGroups = {
+  "python": {
     "name": "Python",
     "icon": "python",
     "worksId": ["colorPycker", "binanceArbOppFinder", "colorNotes", "pySnip", "st3AutoFormat", "openCVToolsDesktopApp",
     ]
   },
-  {
-    "id": "android",
+  "android": {
     "name": "Android",
     "icon": "android",
     "worksId": ["gDriveWhatsappStickersArtistsApp", "colorNotes", "vStackGame"]
   },
-  {
-    "id": "ml",
+  "ml": {
     "name": "Machine Learning",
     "icon": "machine",
     "worksId": ["signalSoftClassifyBot"]
   },
-  {
-    "id": "django",
+  "django": {
     "name": "Django",
     "icon": "django",
     "worksId": ["colorNotes", "examAnswersScanner", "kerasModelsConverter"]
   },
-  {
-    "id": "arduino",
+  "arduino": {
     "name": "Arduino",
     "icon": "arduino",
     "worksId": ["lcMeter"]
   },
-];
+};
 
 const worksGroupsData = {
   "python": {
@@ -88,7 +83,7 @@ const worksGroupsData = {
     },
     "colorNotes": {
       "title": "Color Notes App",
-      "desc": "",
+      "desc": "Simple and intuitive TODO tasks app using colored notes in Android.",
       "date": { "start": "20/09", "end": "20/10" },
       "links": { "git": "https://www.google.com/", "web": "https://www.google.com/" },
       "img": ""

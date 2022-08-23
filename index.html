@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="base/css/base.css">
   <link rel="stylesheet" href="base/css/navbar.css">
   <link rel="stylesheet" href="header/css/header.css">
+  <link rel="stylesheet" href="works/css/works.css">
   <link rel="stylesheet" href="works/css/carrousel.css">
   <link rel="stylesheet" href="works/css/card.css">
   <link rel="stylesheet" href="about/css/about.css">
@@ -35,17 +36,28 @@
       </div>
       <div class="head-wrapper">
         <span class="head-title">Tenma Chinen</span>
-        <span class="head-sub-title">Automation & Industrial Electronic Engineer</span>
-        <p class="head-desc">Freelance Full-Stack Web Developer constantly learning, self taught, curious, and
+        <span class="head-sub-title">Automation & Industrial<br>Electronic Engineer</span>
+        
+        <p class="head-desc">Freelance Full-Stack Web Developer constantly<br>learning, self taught, curious, and
           creative.</p>
+
+          <a class="btn-download-cv" href="header/assets/cv.pdf" target="_blank"><i class="icon icon-download"></i> Download CV</a>
       </div>
     </header>
 
+    <div class="separator header-works"></div>
     <!--   W O R K S   -->
 
     <section id="works">
       <h1 class="section-title">WORKS</h1>
-
+      <div class="works-group-box">
+        <span class="btn-all-groups" onclick="onClickGroup(event,-1)">ALL</span>
+        <i class="icon-lg icon-python" onclick="onClickGroup(event,'python')"></i>
+        <i class="icon-lg icon-django" onclick="onClickGroup(event,'django')"></i>
+        <i class="icon-lg icon-ml" onclick="onClickGroup(event,'ml')"></i>
+        <i class="icon-lg icon-android" onclick="onClickGroup(event,'android')"></i>
+        <i class="icon-lg icon-arduino" onclick="onClickGroup(event,'arduino')"></i>
+      </div>
       <div class="carrousel-wrapper">
         <div id="carrousel" class="carrousel"></div>
         <div class="carrousel-foot">
@@ -57,6 +69,7 @@
 
     </section>
 
+    <div class="separator works-about"></div>
     <!--   A B O U T   -->
 
     <section id="about">
@@ -73,6 +86,7 @@
       <p class="about-desc"></p>
     </section>
 
+    <div class="separator about-contact"></div>
     <!--   C O N T A C T   -->
 
     <section id="contact">
@@ -98,6 +112,7 @@
 
     </section>
 
+    <div class="separator contact-foot"></div>
     <!--   F O O T E R   -->
 
     <footer id="foot">
@@ -106,7 +121,7 @@
           <a href="https://github.com/TenmaChinen" target="_blank" class="icon-lg icon-github"></a>
           <a href="https://www.linkedin.com/in/tenma-chinen/" target="_blank" class="icon-lg icon-linkedin"></a>
         </div>
-        <span class="foot-name">TENMA CHINEN 2022</span>
+        <p class="foot-name">Made and designed by<br>Tenma Chinen ©2022</p>
       </div>
     </footer>
 
@@ -120,7 +135,7 @@
 
 <script>
   /* DEBUG */
-  // location.href = "#foot";
+  // location.href = "#works";
 </script>
 
 </html>

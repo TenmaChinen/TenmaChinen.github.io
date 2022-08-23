@@ -22,6 +22,20 @@
 }
 
 .foot-name{
-  font-size: 20px;
+  min-width: 250px;
+  font-size: 14px;
   letter-spacing: 3px;
+  text-align: center;
+  line-height: 1.8em;
+}
+
+.foot-name br{
+  display: none;
+}
+
+
+@media screen and (max-width:500px) {
+  .foot-name br{
+    display: block;
+  }
 }
