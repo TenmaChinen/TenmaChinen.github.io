@@ -1,27 +1,32 @@
-const workGroups = [
+const worksGroups = [
   {
     "id": "python",
+    "name": "Python",
     "icon": "python",
     "worksId": ["colorPycker", "binanceArbOppFinder", "colorNotes", "pySnip", "st3AutoFormat", "openCVToolsDesktopApp",
     ]
   },
   {
     "id": "android",
+    "name": "Android",
     "icon": "android",
     "worksId": ["gDriveWhatsappStickersArtistsApp", "colorNotes", "vStackGame"]
   },
   {
-    "id": "machineLearning",
+    "id": "ml",
+    "name": "Machine Learning",
     "icon": "machine",
     "worksId": ["signalSoftClassifyBot"]
   },
   {
     "id": "django",
+    "name": "Django",
     "icon": "django",
-    "worksId": ["colorNotes", "examAnswersScanner"]
+    "worksId": ["colorNotes", "examAnswersScanner", "kerasModelsConverter"]
   },
   {
     "id": "arduino",
+    "name": "Arduino",
     "icon": "arduino",
     "worksId": ["lcMeter"]
   },
@@ -97,7 +102,7 @@ const worksGroupsData = {
     },
   },
 
-  "machineLearning": {
+  "ml": {
     "signalSoftClassifyBot": {
       "title": "Trading Classification Bot",
       "desc": "Soft trading signal classification based on Multi Layer Perceptron made in Keras.",
@@ -118,6 +123,13 @@ const worksGroupsData = {
     "examAnswersScanner": {
       "title": "Automatic Answer Checker",
       "desc": "Upload test exam image and automatically retrieves the student score. Based on OpenCV computer vision framework.",
+      "date": { "start": "22/07/10", "end": "still" },
+      "links": { "git": "https://www.google.com/", "web": "https://www.google.com/" },
+      "img": ""
+    },
+    "kerasModelsConverter": {
+      "title": "Keras Models Converter",
+      "desc": "Converts keras neural networks serial models to numpy class file to fast execute without heavy libraries needed.",
       "date": { "start": "22/07/10", "end": "still" },
       "links": { "git": "https://www.google.com/", "web": "https://www.google.com/" },
       "img": ""

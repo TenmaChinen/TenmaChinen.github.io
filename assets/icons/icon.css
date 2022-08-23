@@ -1,10 +1,16 @@
-.icon {
+.icon,
+.icon-lg {
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   cursor: pointer;
   background-origin: content-box;
+}
+
+.icon-lg{
+  width: 40px;
+  height: 40px;
 }
 
 .icon-python {
@@ -28,11 +34,15 @@
 }
 
 .icon-github {
-  background-image: url("../assets/icons/github.svg");
+  background-image: url("github.svg");
 }
 
 .icon-website {
-  background-image: url("../assets/icons/website.svg");
+  background-image: url("website.svg");
+}
+
+.icon-linkedin {
+  background-image: url("linkedin.svg");
 }
 
 

@@ -31,11 +31,11 @@ main {
 
 /* debug */
 section {
-  display: block;
-  width: 100%;
+  /* display: block; */
+  /* width: 100%; */
   /* min-width: 700px; */
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
   /* margin-top: 10px; */
   /* margin-bottom: 10px; */
   padding: 60px 0px;
@@ -62,6 +62,7 @@ header {
 #foot {
   height: 400px;
   background-color:var(--foot-bg);
+
 }
 
 .section-title{

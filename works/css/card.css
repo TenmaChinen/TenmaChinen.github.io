@@ -1,7 +1,7 @@
 :root {
   --card-fg: white;
-  --card-head-bg: rgb(32, 32, 32,0.95);
-  --card-foot-bg:rgb(32, 32, 32,0.8);
+  --card-head-bg: rgb(32, 32, 32, 0.95);
+  --card-foot-bg: rgb(32, 32, 32, 0.8);
 }
 
 .work-card {
@@ -42,13 +42,13 @@
   background-color: rgba(50, 50, 50, 0.8);
 }
 
-.work-card-body p{
+.work-card-body p {
   letter-spacing: 1px;
   opacity: 0;
   transition: opacity ease-in-out 0.5s;
 }
 
-.work-card:hover .work-card-body p{
+.work-card:hover .work-card-body p {
   opacity: 1;
 }
 
@@ -65,14 +65,37 @@
   align-items: center;
 }
 
-.work-card-foot .links-box div{
+.work-card-foot .links-box div {
   margin-left: 5px;
 }
 
-.work-card-foot .group{
-  background-color: rgb(51, 143, 112);
+.work-card-foot .group {
   padding: 4px 6px;
   border-radius: 5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/*   C O L O R S   */
+
+.group-python {
+  background-color: rgb(51, 143, 112);
+}
+
+.group-django {
+  background-color: rgb(189, 40, 2);
+}
+
+.group-android {
+  background-color: rgb(52, 142, 211);
+}
+
+.group-ml {
+  background-color: rgb(196, 114, 41);
+}
+
+.group-arduino {
+  background-color: rgb(52, 211, 113);
 }
 
 /*   M E D I A   Q U E R I E S   */

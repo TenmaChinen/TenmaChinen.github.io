@@ -33,15 +33,16 @@ function changePage(page) {
     const option = -1
     works = [];
     if (option == -1) {
-        workGroups.forEach(worksGroup => {
+        worksGroups.forEach(worksGroup => {
             worksGroup.worksId.forEach(workId => {
-                works.push({ groupId: worksGroup.id, workId: workId });
+                works.push({ groupId: worksGroup.id, workId: workId, groupName:worksGroup.name });
             });
         });
     } else {
-        const groupId = workGroups[option].id;
-        workGroups[option].worksId.forEach(workId => {
-            works.push({ groupId: groupId, workId: workId });
+        const groupId = worksGroups[option].id;
+        const worksGroup = worksGroups[option];
+        workGroup.worksId.forEach(workId => {
+            works.push({ groupId: groupId, workId: workId, groupName:worksGroup.name });
         });
     }
 
@@ -52,7 +53,8 @@ function changePage(page) {
         // carrousel.innerHTML += `<div>${objJson[i].adName}</div>`;
         const work = works[i];
         const workInfo = worksGroupsData[work.groupId][work.workId];
-        carrousel.innerHTML += createCard(workInfo, work.groupId);
+        const groupInfo = { id : work.groupId, name : work.groupName}
+        carrousel.innerHTML += createCard(workInfo, groupInfo);
     }
     pageSpan.innerHTML = `Page : ${page}/${numPages()}`;
 

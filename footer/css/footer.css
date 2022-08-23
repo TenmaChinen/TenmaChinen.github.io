@@ -1,3 +1,27 @@
 #foot{
   color: white;
 }
+
+.foot-wrapper{
+  display: inline-block;
+  position: relative;
+  top:50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+}
+
+.foot-wrapper .links-wrapper{
+  text-align: center;
+  margin-bottom: 10px;
+  /* background-color: aqua; */
+}
+
+
+.foot-wrapper .links-wrapper .icon-lg{
+  margin: 5px;
+}
+
+.foot-name{
+  font-size: 20px;
+  letter-spacing: 3px;
+}

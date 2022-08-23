@@ -1,6 +1,5 @@
-function createCard(workInfo, groupId) {
+function createCard(workInfo, groupInfo) {
   // <a class="work-card-wrapper" href=${''}# target="_blank"></a>
-  const groupName = groupId.charAt(0).toUpperCase() + groupId.slice(1);
   const imgPath = workInfo.img || 'works/assets/images/sample.png';
   return `
     <div class="work-card" style="background-image:url(${imgPath})">
@@ -11,7 +10,7 @@ function createCard(workInfo, groupId) {
         <p>${workInfo.desc}</p>
       </a>
       <div class="work-card-foot">
-        <span class="group">${groupName}</span>
+        <span class="group group-${groupInfo.id}">${groupInfo.name}</span>
         <div class="links-box">
         <a href="${workInfo.links.git}" target="_blank"><div class="icon icon-github"></div></a>
         <a href="${workInfo.links.web}" target="_blank"><div class="icon icon-website"></div></a>
