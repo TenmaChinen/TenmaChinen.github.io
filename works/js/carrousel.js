@@ -34,17 +34,12 @@ function changePage(page) {
     carrousel.innerHTML = "";
     works = [];
     if (selectedGroupId == -1) {
-        Object.keys(worksGroups).forEach(groupId => {
-            const worksGroup = worksGroups[groupId];
-            worksGroup.worksId.forEach(workId => {
-                works.push({ groupId: groupId, workId: workId, groupName:worksGroup.name });
-            });
+        worksInfo.forEach(workInfo => {
+            // TODO : Sort by dates
+            works.push(workInfo);
         });
     } else {
-        const worksGroup = worksGroups[selectedGroupId];
-        worksGroup.worksId.forEach(workId => {
-            works.push({ groupId: selectedGroupId, workId: workId, groupName:worksGroup.name });
-        });
+        works = worksInfo.filter( workInfo => workInfo.groups.includes(selectedGroupId));
     }
 
     if (page < 1) page = 1;
@@ -53,9 +48,7 @@ function changePage(page) {
     for (let i = (page - 1) * recordsPerPage; i < (page * recordsPerPage) && i < works.length; i++) {
         // carrousel.innerHTML += `<div>${objJson[i].adName}</div>`;
         const work = works[i];
-        const workInfo = worksGroupsData[work.groupId][work.workId];
-        const groupInfo = { id : work.groupId, name : work.groupName}
-        carrousel.innerHTML += createCard(workInfo, groupInfo);
+        carrousel.innerHTML += createCard(work);
     }
     pageSpan.innerHTML = `Page : ${page}/${numPages()}`;
 

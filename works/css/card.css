@@ -35,6 +35,9 @@
   flex-grow: 1;
   /* padding: 20px; */
   line-height: 1.5em;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
   transition: background-color ease-in-out 0.5s;
 }
 
@@ -64,6 +67,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.work-card-foot > .group-box > span{
+  margin-right: 10px;
 }
 
 .work-card-foot .links-box div {
