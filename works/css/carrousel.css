@@ -21,7 +21,7 @@
   /* padding: 0px 20px; */
   /* background-color: rgb(237, 194, 136); */
   /* grid-template-columns: repeat(3, 1fr); */
-  gap: 10px 10px;
+  gap: 20px 20px;
   justify-items: center;
   align-items: center;
 }

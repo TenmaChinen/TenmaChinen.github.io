@@ -10,7 +10,7 @@
   border-radius: 10px;
   width: 100%;
   height: 240px;
-  background-color: gray;
+  background-color: rgb(71, 71, 71);
   /* padding: 10px; */
   color: var(--card-fg);
   display: flex;
@@ -33,29 +33,25 @@
   cursor: pointer;
   overflow-y: auto;
   flex-grow: 1;
-  /* padding: 20px; */
   line-height: 1.5em;
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center;
-  transition: background-color ease-in-out 0.5s;
-}
-
-.work-card:hover .work-card-body {
-  background-color: rgba(50, 50, 50, 0.8);
 }
 
 .work-card-body p {
   letter-spacing: 1px;
   opacity: 0;
   transition: opacity ease-in-out 0.5s;
-  margin: 10px 20px 0px 20px;
+  padding: 10px 20px 20px 20px;
+  min-height: 100%;
+  background-color: rgba(50, 50, 50, 0.8);
+  text-shadow: 1px 1px 2px black;
 }
 
 .work-card:hover .work-card-body p {
   opacity: 1;
 }
-
 
 .work-card-foot {
   padding: 7px 10px;
@@ -76,6 +72,11 @@
 .work-card-foot .links-box div {
   margin-left: 5px;
 }
+
+.work-card-foot .links-box .disabled{
+  opacity: 0.4;
+}
+
 
 .work-card-foot .group {
   padding: 4px 6px;
