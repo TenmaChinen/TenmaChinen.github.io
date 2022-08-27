@@ -87,7 +87,7 @@ const worksInfo = [
     "title": "Color Notes WebApp",
     "desc": "TODO customizable task notes based in Django Framework.",
     "date": { "start": "22/07/10", "end": "still" },
-    "links": { "git": "https://www.google.com/", "web": "https://www.google.com/" },
+    "links": { "git": "https://github.com/TenmaChinen/webapp-color-notes-django", "web": "http://tenma.pythonanywhere.com/" },
     "img": ""
   },
   {
