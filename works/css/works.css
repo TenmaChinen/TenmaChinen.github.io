@@ -1,3 +1,9 @@
+:root{
+  --tooltip-bg:rgb(115, 115, 115);
+  --tooltip-fg:white;
+}
+
+
 .works-group-box {
   display: flex;
   padding: 15 px 0px;
@@ -9,18 +15,51 @@
   /* height: 70px; */
 }
 
-.works-group-box > i {
+.works-group-box > .icon-lg {
+  position: relative;
   padding: 7px;
   box-sizing: content-box;
   border: 2px solid transparent;
-  transition: transform 200ms ease-in-out, filter 200ms ease-in-out;
+  /* transition: transform 200ms ease-in-out, filter 200ms ease-in-out; */
+  transition: filter 200ms ease-in-out;
 }
 
-.works-group-box > i:hover {
+.works-group-box > .icon-lg:hover {
   filter: brightness(120%);
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
+.works-group-box > .icon-lg > span{
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+  color: var(--tooltip-fg);
+  font-size: 20px;
+  font-style: normal;
+  background-color: var(--tooltip-bg);
+  padding: 6px 10px;
+  border-radius: 5px;
+  white-space:nowrap;
+  opacity: 0;
+  box-shadow: 2px 2px 2px rgba(40, 40, 40, 0.7);
+  transition: opacity 500ms ease-in-out ;
+}
+
+.works-group-box > .icon-lg > span::before{
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--tooltip-bg) transparent transparent transparent;
+}
+
+.works-group-box > .icon-lg:hover > span{
+  opacity: 1;
+}
 
 .group-selected {
   border-radius: 20px;
