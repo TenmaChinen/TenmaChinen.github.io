@@ -51,8 +51,10 @@
   margin-right: 10px;
   text-decoration: none;
   background-color: transparent;
-  cursor: pointer;
   font-size: var(--pagination-txt-size);
+}
+.carrousel-foot button{
+  cursor: pointer;
 }
 
 .carrousel-foot button:disabled{
@@ -62,17 +64,19 @@
 
 @media screen and (min-width: 1150px){
   #carrousel{
-    grid-template-columns: repeat(3, minmax(100px,320px));
+    grid-template-columns: repeat(3, minmax(100px,350px));
   }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1150px){
+/* @media screen and (max-width: 1150px){ */
   #carrousel{
-    grid-template-columns: repeat(2,minmax(100px,350px));
+    grid-template-columns: repeat(2,minmax(100px,420px));
   } 
 }
 
 @media screen and (max-width: 600px){
+/* @media screen and (max-width: 1150px){ */
   #carrousel{
     grid-template-columns: 1fr;
   } 

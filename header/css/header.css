@@ -42,6 +42,7 @@ header {
   margin-bottom: 20px;
   text-align: center;
   line-height: 1.5em;
+  letter-spacing: 1px;
 }
 
 .head-desc {
@@ -50,6 +51,7 @@ header {
   padding: 0px 10px;
   text-align: center;
   line-height: 1.5em;
+  letter-spacing: 1px;
 }
 
 .btn-download-cv{

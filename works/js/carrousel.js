@@ -3,7 +3,7 @@ let recordsPerPage = 6;
 
 let works;
 let selectedGroupId = -1;
-let lastSelectedElement = document.querySelector('.btn-all-groups');
+let lastSelectedElement = document.querySelector('.icon-all-groups');
 lastSelectedElement.classList.toggle("group-selected");
 // const objJson = [];
 
@@ -92,33 +92,44 @@ function onClickGroup(event,groupId){
 
 
 /* MEDIA QUERY */
+const SIZE_LG = 1050;
+const SIZE_MD = 700;
+const SIZE_SM = 550;
+const mqCarrouselMediaQueryLG = window.matchMedia(`(min-width: ${SIZE_LG}px)`);
+const mqCarrouselMediaQueryMD = window.matchMedia(`(min-width: ${SIZE_MD}px) and (max-width: ${SIZE_LG}px)`);
+const mqCarrouselMediaQuerySM = window.matchMedia(`(min-width: ${SIZE_SM}px) and (max-width: ${SIZE_MD}px)`);
+const mqCarrouselMediaQueryBS = window.matchMedia(`(max-width: ${SIZE_SM}px)`);
 
-const mqCarrouselMin900 = window.matchMedia("(min-width: 900px)");
-const mqCarrousel600900 = window.matchMedia("(min-width: 600px) and (max-width: 900px)");
-const mqCarrouselMax600 = window.matchMedia("(max-width: 600px)");
+mqCarrouselMediaQueryLG.onchange = mqCarrouselCallbackLG;
+mqCarrouselMediaQueryMD.onchange = mqCarrouselCallbackMD;
+mqCarrouselMediaQuerySM.onchange = mqCarrouselCallbackSM;
+mqCarrouselMediaQueryBS.onchange = mqCarrouselCallbackBS;
 
-mqCarrouselMin900.onchange = mqCarrouselCallbackMin900;
-mqCarrousel600900.onchange = mqCarrouselCallback600900;
-mqCarrouselMax600.onchange = mqCarrouselCallbackMax600;
+mqCarrouselCallbackLG(mqCarrouselMediaQueryLG);
+mqCarrouselCallbackMD(mqCarrouselMediaQueryMD);
+mqCarrouselCallbackSM(mqCarrouselMediaQuerySM);
+mqCarrouselCallbackBS(mqCarrouselMediaQueryBS);
 
-mqCarrouselCallbackMin900(mqCarrouselMin900);
-mqCarrouselCallback600900(mqCarrousel600900);
-mqCarrouselCallbackMax600(mqCarrouselMax600);
-
-function mqCarrouselCallbackMin900(eventMQ) {
+function mqCarrouselCallbackLG(eventMQ) {
     if (eventMQ.matches) recordsPerPage = 6;
     currentPage = 1
     changePage(1);
 }
 
-function mqCarrouselCallback600900(eventMQ) {
+function mqCarrouselCallbackMD(eventMQ) {
     if (eventMQ.matches) recordsPerPage = 4;
     currentPage = 1
     changePage(1);
 }
 
-function mqCarrouselCallbackMax600(eventMQ) {
+function mqCarrouselCallbackSM(eventMQ) {
     if (eventMQ.matches) recordsPerPage = 2;
+    currentPage = 1
+    changePage(1);
+}
+
+function mqCarrouselCallbackBS(eventMQ) {
+    if (eventMQ.matches) recordsPerPage = 1;
     currentPage = 1
     changePage(1);
 }

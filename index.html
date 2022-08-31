@@ -29,7 +29,9 @@
   </nav>
 
   <main>
+    
     <!--   H E A D E R   -->
+
     <header>
       <div class="img-face-wrapper">
         <img src="header/assets/face_circle.png" alt="profile" height="100%">
@@ -38,7 +40,7 @@
         <span class="head-title">Tenma Chinen</span>
         <span class="head-sub-title">Automation & Industrial<br>Electronic Engineer</span>
         
-        <p class="head-desc">Freelance Full-Stack Web Developer constantly<br>learning, self taught, curious, and
+        <p class="head-desc">Freelance Full-Stack Web Developer<br>Constantly learning, self taught, curious, and
           creative.</p>
 
           <a class="btn-download-cv" href="header/assets/cv.pdf" target="_blank"><i class="icon icon-download"></i> Download CV</a>
@@ -46,12 +48,14 @@
     </header>
 
     <div class="separator header-works"></div>
+
     <!--   W O R K S   -->
+    <span id="snackbar">TOAST</span>
 
     <section id="works">
       <h1 class="section-title">WORKS</h1>
       <div class="works-group-box">
-        <span class="btn-all-groups" onclick="onClickGroup(event,-1)">ALL</span>
+        <i class="icon-lg icon-all-groups" onclick="onClickGroup(event,-1)"></i>
         <i class="icon-lg icon-python" onclick="onClickGroup(event,'Python')"></i>
         <i class="icon-lg icon-django" onclick="onClickGroup(event,'Django')"></i>
         <i class="icon-lg icon-ml" onclick="onClickGroup(event,'ML')"></i>
@@ -70,6 +74,7 @@
     </section>
 
     <div class="separator works-about"></div>
+
     <!--   A B O U T   -->
 
     <section id="about">
@@ -87,6 +92,7 @@
     </section>
 
     <div class="separator about-contact"></div>
+
     <!--   C O N T A C T   -->
 
     <section id="contact">
@@ -113,6 +119,7 @@
     </section>
 
     <div class="separator contact-foot"></div>
+
     <!--   F O O T E R   -->
 
     <footer id="foot">
@@ -132,9 +139,11 @@
 <script src="works/js/data.js"></script>
 <script src="works/js/card.js"></script>
 <script src="works/js/carrousel.js"></script>
+<script src="components/snackbar/snackbar.js"></script>
 
 <script>
   /* DEBUG */
+  const snackbar = getSnackbar();
   // location.href = "#works";
 </script>
 

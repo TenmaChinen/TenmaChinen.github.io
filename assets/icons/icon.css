@@ -13,6 +13,16 @@
   height: 40px;
 }
 
+/*   I C O N   I M A G E S   */
+
+.icon-all-groups {
+  background-image: url("all-groups.svg");
+}
+
+.icon-python {
+  background-image: url("python.svg");
+}
+
 .icon-python {
   background-image: url("python.svg");
 }
@@ -33,12 +43,17 @@
   background-image: url("arduino.svg");
 }
 
-.icon-github {
-  background-image: url("github.svg");
-}
 
 .icon-website {
   background-image: url("website.svg");
+}
+
+.icon-doc {
+  background-image: url("doc.svg");
+}
+
+.icon-github {
+  background-image: url("github.svg");
 }
 
 .icon-linkedin {
