@@ -13,6 +13,13 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+
+  
+  /* Removes the blue box on small devices */
+  -webkit-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -khtml-tap-highlight-color: transparent;
 }
 
 body {
@@ -70,7 +77,7 @@ header {
   color: white;
   text-align: center;
   /* margin-top: 20px; */
-  /* margin-bottom: 10px; */
+  margin-bottom: 20px;
 }
 
 

@@ -11,17 +11,17 @@
   max-width: var(--form-width);
   border-radius: 5px;
   background-color: var(--form-bg);
-  /* box-shadow: 1px 1px 5px gray; */
-  padding: 10px;
+  padding: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .form-body {
   display: grid;
-  grid-template-columns: 80px minmax(0px,1fr);
-  row-gap: 10px;
-  column-gap: 5px;
+  grid-template-columns: max-content minmax(0px,1fr);
+  row-gap: 15px;
+  column-gap: 10px;
+  align-items: center;
 }
 
 form input,
@@ -33,12 +33,16 @@ form textarea {
 
 form label {
   display: inline-block;
-  width: 80px;
+}
+
+form label[for=message]{
+  margin-top: 5px;
+  align-self: flex-start;
 }
 
 form input,
 form textarea {
-  padding: 5px;
+  padding: 8px;
   border-radius: 3px;
   border: 1px solid gray;
   background-color: var(--form-input-bg);
@@ -53,6 +57,7 @@ form textarea::placeholder{
 
 form textarea {
   min-height: 100px;
+  resize: none;
 }
 
 .form-foot{
@@ -68,4 +73,12 @@ form textarea {
   color: white;
   border: 1px solid gray;
   width: 80px;
+}
+
+
+.form-body > input:-webkit-autofill,
+.form-body > input:-webkit-autofill:hover, 
+.form-body > input:-webkit-autofill:focus{
+	-webkit-text-fill-color: var(--form-fg);
+	transition: background-color 5000s ease-in-out 0s;
 }

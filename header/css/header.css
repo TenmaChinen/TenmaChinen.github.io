@@ -84,7 +84,7 @@ header {
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (min-width: 450px) and (max-width: 950px) {
   header {
     flex-direction: column;
   }
@@ -98,5 +98,22 @@ header {
     --head-title-size:40px;
     --head-sub-title-size:20px;
     --head-desc-size:20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    flex-direction: column;
+  }
+
+  .img-face-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+  
+  :root{
+    --head-title-size:30px;
+    --head-sub-title-size:16px;
+    --head-desc-size:14px;
   }
 }

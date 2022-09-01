@@ -36,7 +36,8 @@
   flex-grow: 1;
   line-height: 1.5em;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  /* background-size: auto 100%; */
+  background-size: contain;
   background-position: center;
   text-decoration: none;
 }

@@ -98,16 +98,16 @@
     <section id="contact">
       <h1 class="section-title">CONTACT</h1>
       <div class="form-wrapper">
-        <form action="#">
+        <form method="POST" action="https://formsubmit.co/c75f084caabe83455c66de3165e88d21">
           <div class="form-body">
-            <label>Name:</label>
-            <input name="name" type="text" placeholder="Your Name">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Your Name" required>
 
-            <label>Email:</label>
-            <input name="email" type="email" placeholder="You Email">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="You Email" required>
 
-            <label>Message:</label>
-            <textarea name="message" type="text" placeholder="Write your message here"></textarea>
+            <label for="message">Message</label>
+            <textarea type="text" name="message" placeholder="Write your message here" required></textarea>
           </div>
 
           <div class="form-foot">
@@ -142,8 +142,9 @@
 <script src="components/snackbar/snackbar.js"></script>
 
 <script>
-  /* DEBUG */
   const snackbar = getSnackbar();
+  
+  /* DEBUG */
   // location.href = "#works";
 </script>
 

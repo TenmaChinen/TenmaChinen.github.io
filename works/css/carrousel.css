@@ -34,10 +34,13 @@
 
 
 .carrousel-foot{
-  /* width: 100%; */
+  width: 100%;
+  max-width: 400px;
   /* background-color: aquamarine; */
   font-size: var(--carrousel-foot-txt-size);
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   margin-top: 10px;
 }
 
@@ -47,14 +50,20 @@
   border: 1px solid gray;
   border-radius: 30px;
   padding: 8px 15px;
-  margin-left: 10px;
-  margin-right: 10px;
   text-decoration: none;
   background-color: transparent;
   font-size: var(--pagination-txt-size);
 }
-.carrousel-foot button{
+.carrousel-foot button:not([disabled]){
   cursor: pointer;
+}
+
+.carrousel-foot button{
+  transition: border-color 500ms ease-in-out;
+}
+
+.carrousel-foot button:not([disabled]):hover{
+  border-color: white;
 }
 
 .carrousel-foot button:disabled{
@@ -69,14 +78,12 @@
 }
 
 @media screen and (min-width: 600px) and (max-width: 1150px){
-/* @media screen and (max-width: 1150px){ */
   #carrousel{
     grid-template-columns: repeat(2,minmax(100px,420px));
   } 
 }
 
 @media screen and (max-width: 600px){
-/* @media screen and (max-width: 1150px){ */
   #carrousel{
     grid-template-columns: 1fr;
   } 
