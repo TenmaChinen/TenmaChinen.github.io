@@ -2,6 +2,8 @@
   --card-fg: white;
   --card-head-bg: rgb(32, 32, 32, 0.95);
   --card-foot-bg: rgb(32, 32, 32, 0.8);
+  --tooltip-link-fg:white;
+  --tooltip-link-bg:rgb(50, 50, 50);
 }
 
 .work-card {
@@ -19,6 +21,8 @@
   justify-content: space-between;
 }
 
+/*   C A R D   H E A D   */
+
 .work-card-head {
   padding: 10px 10px;
   font-size: var(--card-title-txt-size);
@@ -29,6 +33,10 @@
   text-align: center;
 }
 
+/*   C A R D   H E A D   */
+
+/*   C A R D   B O D Y   */
+
 .work-card-body {
   font-size: var(--card-body-txt-size);
   cursor: pointer;
@@ -36,7 +44,6 @@
   flex-grow: 1;
   line-height: 1.5em;
   background-repeat: no-repeat;
-  /* background-size: auto 100%; */
   background-size: contain;
   background-position: center;
   text-decoration: none;
@@ -57,6 +64,10 @@
   opacity: 1;
 }
 
+/*   C A R D   B O D Y   */
+
+/*   C A R D   F O O T   */
+
 .work-card-foot {
   padding: 7px 10px;
   font-size: var(--card-foot-txt-size);
@@ -69,10 +80,20 @@
   align-items: center;
 }
 
+/* Group */
 .work-card-foot > .group-box{
   display: flex;
   flex-direction: row;
 }
+
+.work-card-foot .group {
+  padding: 4px 6px;
+  border-radius: 5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Links */
 
 .work-card-foot > .group-box > span{
   display: inline-block;
@@ -84,21 +105,48 @@
   user-select: none; /* Standard */
 }
 
-.work-card-foot .links-box a {
+.work-card-foot > .links-box a {
+  position: relative;
   margin-left: 3px;
 }
 
-.work-card-foot .links-box .disabled{
-  opacity: 0.4;
+.work-card-foot > .links-box > .disabled.icon{
+  filter: brightness(50%);
 }
 
-
-.work-card-foot .group {
-  padding: 4px 6px;
+.work-card-foot > .links-box > a > span{
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+  color: var(--tooltip-link-fg);
+  font-size: 14px;
+  font-style: normal;
+  background-color: var(--tooltip-link-bg);
+  padding: 6px 10px;
   border-radius: 5px;
-  font-weight: 800;
-  letter-spacing: 1px;
+  white-space:nowrap;
+  opacity: 0;
+  box-shadow: 2px 2px 2px rgba(40, 40, 40, 0.7);
+  transition: opacity 200ms ease-in-out ;
 }
+
+.work-card-foot > .links-box > a > span::before{
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--tooltip-link-bg) transparent transparent transparent;
+}
+
+.work-card-foot > .links-box > a:hover span{
+  opacity: 1;
+}
+
+/*   C A R D   F O O T   */
 
 /*   C O L O R S   */
 

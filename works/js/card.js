@@ -17,9 +17,9 @@ function createCard(work) {
       <div class="work-card-foot">
         <div class="group-box">${icons}</div>
         <div class="links-box">
-          <a ${getLinkAction(links.web)} class="icon icon-website ${isUrl(links.web) ? '' : 'disabled'}"></a>
-          <a ${getLinkAction(links.git)} class="icon icon-github ${isUrl(links.git) ? '' : 'disabled'}"></a>
-          <a ${getLinkAction(links.doc)} class="icon icon-doc ${isUrl(links.doc) ? '' : 'disabled'}"></a>
+          <a ${getLinkAction(links.web)} class="icon icon-website ${isUrl(links.web) ? '' : 'disabled'}"><span>Website</span></a>
+          <a ${getLinkAction(links.git)} class="icon icon-github ${isUrl(links.git) ? '' : 'disabled'}"><span>Github</span></a>
+          <a ${getLinkAction(links.doc)} class="icon icon-doc ${isUrl(links.doc) ? '' : 'disabled'}"><span>Document</span></a>
         </div>
       </div>
     </a>
@@ -34,3 +34,4 @@ function getLinkAction(link) {
 function isUrl(link) {
   return link.startsWith("http");
 }
+
