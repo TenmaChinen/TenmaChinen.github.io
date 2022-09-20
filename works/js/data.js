@@ -131,6 +131,24 @@ const worksInfo = [
     bigLink: "git",
     img: BASE_DIR + "lc_meter.png",
     date: { start: "2017/05/05", end: "2017/05/05" }
+  },
+  {
+    groups: ["JavaScript"],
+    title: "Matrix JS Library ",
+    desc: "Small JavaScript library to perform matrix operations.",
+    links: { git: GIT + "matrix-js", web: MSG_NAV, doc: GIT + "matrix-js#readme" },
+    bigLink: "git",
+    img: "https://user-images.githubusercontent.com/36393143/190913289-fe8a3883-98c6-4d98-839c-39ac2672774a.png",
+    date: { start: "2022/09/17", end: "2022/09/19" }
+  },
+  {
+    groups: ["Python", "ML", "JavaScript"],
+    title: "ANN Models To Numpy - JavaScript",
+    desc: "Python app to convert Keras models into Numpy or JavaScript file to easy perform the neural networks feed-forward.",
+    links: { git: GIT + "ann-models-2-npy-js", web: MSG_NAV, doc: GIT + "ann-models-2-npy-js#readme" },
+    bigLink: "git",
+    img: "",
+    date: { start: "2022/09/10", end: "2022/09/21" }
   }
 ];
 

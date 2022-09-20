@@ -178,6 +178,10 @@
   background-color: rgb(45, 184, 200);
 }
 
+.group-javascript {
+  background-color: rgb(207, 187, 59);
+}
+
 /*   S C R O L L S   */
 
 .work-card-body::-webkit-scrollbar{

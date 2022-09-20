@@ -23,10 +23,6 @@
   background-image: url("python.svg");
 }
 
-.icon-python {
-  background-image: url("python.svg");
-}
-
 .icon-android {
   background-image: url("android.svg");
 }
@@ -43,6 +39,15 @@
   background-image: url("arduino.svg");
 }
 
+.icon-java {
+  background-image: url("java.svg");
+}
+
+.icon-javascript {
+  background-image: url("javascript.svg");
+}
+
+/*  */
 
 .icon-website {
   background-image: url("website.svg");
