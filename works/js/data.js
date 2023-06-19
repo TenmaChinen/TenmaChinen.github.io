@@ -82,8 +82,8 @@ const worksInfo = [
     groups: ["Android", "Java"],
     title: "VStack game",
     desc: "Small arcade game, styled as old arcade games, whose goal is to stack blocks on top of each other until reach the top. With several levels.",
-    links: { git: MSG_NAV, web: MSG_NAV, doc: MSG_NAV },
-    bigLink: "git",
+    links: { git: MSG_NAV, web: "https://play.google.com/store/apps/details?id=com.softramen.vstack", doc: MSG_NAV },
+    bigLink: "web",
     img: BASE_DIR + "vstack.png",
     date: { start: "2018/09/03", end: "2019/07/15" }
   },
