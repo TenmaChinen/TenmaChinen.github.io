@@ -51,6 +51,15 @@ const worksInfo = [
     date: { start: "2021/07/14", end: "2021/07/16" }
   },
   {
+    groups: ["Android", "Java"],
+    title: "VStack ( Game )",
+    desc: "Small arcade game, styled as old arcade games, whose goal is to stack blocks on top of each other until reach the top. With several levels.",
+    links: { git: "https://github.com/TenmaChinen/vstack", web: "https://play.google.com/store/apps/details?id=com.softramen.vstack", doc: MSG_NAV },
+    bigLink: "web",
+    img: BASE_DIR + "vstack.png",
+    date: { start: "2022/09/01", end: "2023/04/01" }
+  },
+  {
     groups: ["Python", "Android", "Java"],
     title: "Binance Arbitrage Finder",
     desc: "Gathering data from Binance stores and notifies each opportunity in an Android App",
@@ -59,7 +68,6 @@ const worksInfo = [
     img: BASE_DIR + "arbitrage_app.png",
     date: { start: "2020/10/22", end: "2021/03/16" }
   },
-
   {
     groups: ["Android", "Java"],
     title: "Whatsapp Artists Stickers App",
@@ -77,15 +85,6 @@ const worksInfo = [
     img: BASE_DIR + "color-notes-app.png",
     bigLink: "git",
     date: { start: "2019/08/28", end: "2019/09/14" }
-  },
-  {
-    groups: ["Android", "Java"],
-    title: "VStack game",
-    desc: "Small arcade game, styled as old arcade games, whose goal is to stack blocks on top of each other until reach the top. With several levels.",
-    links: { git: MSG_NAV, web: "https://play.google.com/store/apps/details?id=com.softramen.vstack", doc: MSG_NAV },
-    bigLink: "web",
-    img: BASE_DIR + "vstack.png",
-    date: { start: "2018/09/03", end: "2019/07/15" }
   },
   {
     groups: ["ML", "Python"],
@@ -112,7 +111,7 @@ const worksInfo = [
     links: { git: MSG_NAV, web: MSG_NAV, doc: MSG_NAV },
     bigLink: "web",
     img: BASE_DIR + "exam-scanner.png",
-    date: { start: "2022/07/24", end: "" }
+    date: { start: "2022/07/24", end: "2023/02/01" }
   },
   {
     groups: ["Django", "Python", "ML"],
